@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int n,r=0;
+        int a=1,b=1;
+        n=input.nextInt();
+        while(a<=n||b<=n)
+        {
+            if(a%2==0)
+                r+=a;
+            if(b%2==0&&b<=n)
+                r+=b;
+            a=a+b;
+            b=a+b;
+        }
+        input.close();
+        System.out.println(r);
+    }
+
+}
+
